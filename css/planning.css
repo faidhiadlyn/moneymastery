@@ -1,0 +1,282 @@
+/* Resetting default browser styles */
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/img/Registration-page.jpg");
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+/* Main container styles */
+main {
+    width: 60%;
+    margin: 1.25rem auto;
+    background-color: white;
+    padding: 1.25rem;
+    box-shadow: 0 0px 0px black;
+    text-align: center;
+
+}
+
+/* Container styles */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px grey;
+    padding: 20px;
+}
+
+/* Main content styles */
+.main {
+    margin-top: 20px;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 1rem;
+}
+.input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Button styles */
+.btnemail,
+.btn {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnemail {
+    background-color: rgb(52, 197, 190);
+    color: white;
+    border: none;
+}
+
+.btnemail:hover {
+    background-color: rgb(52, 197, 190);
+}
+
+.btn {
+    background-color: rgb(52, 197, 190);
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgb(52, 197, 190);
+}
+
+/* Select styles */
+select {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* File input styles */
+#file {
+    width: 87%;
+}
+
+/* Card styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 grey;
+    transition: 0.3s;
+    width: 30%;
+    margin: 10px;
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.containercard {
+    padding: 10px 16px;
+}
+
+.card-input:checked + .containercard {
+    background-color: rgb(52, 197, 190);
+}
+
+/* Content styles */
+.content {
+    padding: 5px;
+}
+
+.form-content {
+    padding: 10px;
+}
+
+/* Price form styles */
+.price-form {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+    padding: 20px;
+}
+
+/* Button styles inside the form */
+button {
+    margin: 10px 0 10px 0;
+    background-color: rgb(52, 197, 190);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 25px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button:hover, .btnemail  { 
+    background-color: rgb(65, 223, 215);
+}
+
+/* Input styles inside the form */
+input {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+    background: whitesmoke;
+    transition: transform 0.2s ease;
+}
+
+/* Heading styles */
+h2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Results styles */
+.results {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Card-1 styles */
+.card-1 {
+    color: black;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#monthlyPayment {
+    font-size: 1.5rem;
+}
+
+.indicators {
+    font-size: 1.3em;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+footer > span {
+    opacity: 0.5;
+}
+
+footer > span > a {
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+    }
+
+    .results {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+#homeButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(0, 222, 0);
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  }
