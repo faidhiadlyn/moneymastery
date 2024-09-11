@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | MoneyMastery</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container login-container">
+        <form class="form-lg" id="adminLoginForm">
+          <h1>Login here.</h1>
+          <div class="form-control2">
+            <input type="text" class="username-2" name="username-2" id="adminUsername" placeholder="Username" required />
+            <small class="username-error-2"></small>
+            <span></span>
+          </div>
+          <div class="form-control2">
+            <input type="password" class="password-2" name="password-2" id="adminPassword" placeholder="Password" required />
+            <small class="password-error-2"></small>
+            <span></span>
+          </div>
+
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label for="">Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password</a>
+            </div>
+          </div>
+          <button type="submit" value="submit">Login</button>
+          <span>Our Home Page</span>
+          <div class="social-container">
+            <a href="home.html" class="social"><i class="fa-solid fa-house"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Hello<br />
+              Admin!
+            </h1>
+            <p>
+              If you are not the admin, click the button below to user's login page. 
+            </p>
+            <a href="Starter.html" target="_blank" rel="noopener noreferrer">
+              <button class="ghost" id="register">
+                User
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Array of hardcoded admin credentials
+      const adminCredentials = [
+        { username: "adminfaidhi", password: "faidhi" },
+        { username: "adminfiras", password: "firas" },
+        { username: "adminwafiy", password: "wafiy" },
+        { username: "adminmanball", password: "manball" },
+        { username: "adminsafwat", password: "safwat" }
+      ];
+
+      // Event listener for form submission
+      document.getElementById("adminLoginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents the form from submitting normally
+
+        // Retrieve entered username and password
+        const enteredUsername = document.getElementById("adminUsername").value;
+        const enteredPassword = document.getElementById("adminPassword").value;
+
+        // Check if the entered credentials match any of the hardcoded admin credentials
+        const matchedCredentials = adminCredentials.find(cred => cred.username === enteredUsername && cred.password === enteredPassword);
+
+        if (matchedCredentials) {
+          // Successful login - redirect to the dashboardadmin.html
+          window.location.href = "dashboardadmin.html";
+        } else {
+          // Incorrect credentials - you can display an error message or take other actions here
+          alert("Incorrect username or password. Please try again.");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!-- Group 2 - Project Web and Database -->
+<!DOCTYPE html>
+<html lang="en" data-page-id="tracker">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Expense Tracker | MoneyMastery</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/tracker.css" />
+
+  </head>
+  <body>
+    <h1 style="font-size: 20px; ">Expense Tracker</h1>
+<p style="text-align: center; font-size: 13px;">Choose your bank by clicking the card at the right side.</p>
+    <main>
+      <header>
+        <div>
+          <h5>Total Balance</h5>
+          <span id="balance">RM0.00</span>
+        </div>
+        <div>
+          <h5>Income</h5>
+          <span id="income">RM0.00</span>
+        </div>
+        <div>
+          <h5>Expense</h5>
+          <span id="expense">RM0.00</span>
+        </div>
+      </header>
+
+      <section>
+        <h3>Add Transaction</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Expense</span>
+                <span>Income</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+
+      <div class="bankcard">
+      <section id="imageSection">
+        <a href="tracker.html">
+        <img src="img/maybank card.png" alt="Description of the image" />
+        </a>
+      </section>
+
+      <section id="imageSection2">
+        <a href="tracker2.html">
+        <img src="img/cimb card.png" alt="Description of the image" />
+        </a>
+      </section>
+
+      <section id="imageSection3">
+        <a href="tracker3.html">
+        <img src="img/rhb card.png" alt="Description of the image" />
+        </a>
+      </section>
+
+      <a href="dashboard.html" id="homeButton">
+        <span class="material-symbols-outlined">home</span>
+      </a>  
+    </div>    
+    </main>
+
+
+    <script src="js/tracker.js"></script>
+  </body>
+</html>

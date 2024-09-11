@@ -1,0 +1,83 @@
+<!-- Group 2 - Project Web and Database -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Planning | MoneyMastery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/planning.css">
+    
+    <script src="js/calculator.js"></script>
+    <script src="js/planning.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Goal Setting & Planning</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main">
+                <div class="content">
+                    <div class="form-content">
+                        <h2>Loan Calculator</h2><br>
+                        <form id="price-form" class="price-form" method="post" action="process_form.php">
+                            <label>Price Amount</label><br><br>
+                            <input type="number" id="amount"><br><br>
+                            <label>Number of Months</label><br><br>
+                            <input type="number" id="months">
+                            <button type="submit">Calculate</button>
+                            <h2>Calculated Results</h2>
+                            <div class="results">
+                            <div class="card-1">
+                            <p id="monthlyPayment">Monthly Payments</p>
+                        </div>
+                    </div>
+                        </form>
+                    </div>
+                    
+                    <div class="section plan-section">
+                        <form id="budgetForm" method="post" action="process_form.php">
+                           <br><label for="income">Monthly income (RM):</label><br><br>
+                            <input class="input" type="text" id="income">
+                            <div class="card-container">
+                                <label class="card" for="plan1">
+                                    <input type="radio" id="plan1" name="plans" class="card-input">
+                                    <div class="containercard">
+                                        <h3>Plan 1</h3><br>
+                                        <p>50-30-20</p>
+                                    </div>
+                                </label>
+                                <label class="card" for="plan2">
+                                    <input type="radio" id="plan2" name="plans" class="card-input">
+                                    <div class="containercard">
+                                        <h3>Plan 2</h3><br>
+                                        <p>70-10-20</p>
+                                    </div>
+                                </label>
+                                <label class="card" for="plan3">
+                                    <input type="radio" id="plan3" name="plans" class="card-input">
+                                    <div class="containercard">
+                                        <h3>Plan 3</h3><br>
+                                        <p>40-30-30</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <button type="button" onclick="calculateBudget()">Calculate</button>
+                        </form>
+                        <div id="planned"></div>
+                    </div>
+                </div>
+            </div>
+            <p style="font-weight: bold;">Organized by: </p>
+            <img src="img/logobg.png" alt="logo" style="width: 25%;">
+        </div>
+
+        <a href="dashboard.html" id="homeButton">
+            <span class="material-symbols-outlined">Dashboard</span>
+          </a>  
+    </main>
+</body>
+</html>

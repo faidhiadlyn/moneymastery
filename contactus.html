@@ -1,0 +1,59 @@
+<!-- Group 2 - Project Web and Database -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contactus.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <title>Contact Us | MoneyMastery</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+
+  <header>
+    <!-- Navigation Bar -->
+    <a href="#" class="site-logo" aria-label="homepage">CONTACT</a>
+      <nav class="main-nav">
+      <ul class="nav__list">
+        <li class="nav__list-item"><a href="home.html" class="nav__link">Home</a></li>
+        <li class="nav__list-item"><a href="aboutus.html" class="nav__link">About</a></li>       
+        <li class="nav__list-item"><a href="Starter.html" class="nav__link">Dashboard</a> </li>          
+        <li class="nav__list-item"><a href="features.html" class="nav__link">Features</a> </li>      
+      </ul>
+      </nav>
+
+      <nav class="account">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+          <a class="nav__link nav__link--btn nav__link--btn--highlight"   href="Starter.html">Login</a></li> 
+        </ul>
+      </nav>
+  </header>
+      <!-- End of Navigation Bar -->
+
+    <form class="form" action="process_contactus.php" method="post">
+    <h2>CONTACT US</h2>
+    <p type="Name:"><input name="name" placeholder="Write your name here.."></input></p>
+    <p type="Email:"><input name="email" placeholder="Let us know how to contact you back.."></input></p>
+    <p type="Message:"><input name="message" placeholder="What would you like to tell us.."></input></p>
+    <button type="submit">Send Message</button>
+    <div>
+      <span class="bx bx-phone"></span>011 5816 780
+      <span class="bx bxl-gmail"></span> contact@mmastery.com
+    </div>
+  </form>
+
+  </div>
+  
+</body>
+</html>
